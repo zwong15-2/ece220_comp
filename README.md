@@ -36,8 +36,7 @@ To be able to retrieve assignments from the `_release` repository you have to
 add it as a remote:
 
 ```
-git remote add release
-https://github-dev.cs.illinois.edu/ECE220SU18/_release.git
+git remote add release https://github-dev.cs.illinois.edu/ECE220SU18/_release.git
 ```
 
 You can check whether the remote was added:
