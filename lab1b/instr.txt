@@ -1,0 +1,16 @@
+Instructions
+************
+Given a hexadecimal number stored in register R3, print out the ASCII
+representation to the console.
+
+Example:
+Input: R3 - xEE15
+Output: Console - "EE15"
+
+This lab assignment is intended to serve as a brief refresher on LC3 assembly
+and be part of your MP1 assignment. You must write the code in the
+'print_hex.asm' file where indicated.
+
+As with 'lab1a', you are provided with a Makefile, some source code, and tests.
+Please take a look at the 'instr.txt' in 'lab1a' for explanations about the
+various files/directories this lab folder.

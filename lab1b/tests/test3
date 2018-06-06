@@ -1,0 +1,3 @@
+file obj/print_hex
+register R3 5010
+continue

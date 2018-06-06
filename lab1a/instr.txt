@@ -1,0 +1,26 @@
+Instructions
+************
+Change <NAME> to your name to print out a simple message to the console.
+
+This lab assignment is intended to give an overview of how to checkout, commit,
+and push code to your Github repositories; provide a brief refresher on the
+lc3tools; and illustrate the workflow for lab assignments.
+
+All labs assignments will have the following structure:
+* src - contains the source code for the assignment
+* tests - contains individual test scripts and a script to run all the scripts
+* instr.txt - this file that describes the lab assignment
+* Makefile - file to compile code, run tests, and clean object files
+
+The Makefile is a file that contains shell commands that can be used to compile
+source code and perform other tasks. If you open the Makefile, you will see a
+few labels followed by some shell commands. Below is a list of Make commands and
+their functions:
+* 'make' - executes the commands associated with the 'all' label which
+  references the'dirs' and 'sources' labels. The 'dirs' label creates an 'obj'
+  directory and the 'sources' label compiles your code and moves all object
+  files to the 'obj' directory. 
+* 'make clean' - removes the 'obj' directory and all object files(this may be
+  useful in the future for C labs/MPs in some situations). 
+* 'make test' - runs the 'runtests.sh' script in the 'tests' directory. This
+  script runs all the individual tests and reports program's score against them.

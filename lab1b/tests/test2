@@ -1,0 +1,3 @@
+file obj/print_hex
+register R3 CA75
+continue
