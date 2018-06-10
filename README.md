@@ -89,13 +89,12 @@ Finally, push the changes in your local repository to the remote repository
 with:
 
 ```
-git push origin <assignment>
+git push origin master
 ```
 
 ### Switching branches
 
-To view other assignments, you will need to switch branches. You can see which
-branch you are currently on with:
+You can see a list of branches with:
 
 ```
 git branch
@@ -104,12 +103,14 @@ git branch
 To change to another branch, run:
 
 ```
-git checkout <assignment>
+git checkout <another branch>
 ```
 
 Please commit all your work before switching branches to minimize data loss.
 
 ## Grades
+
+This section will be updated in the near future.
 
 
 [1]: https://wiki.illinois.edu/wiki/display/ece220su2/ECE+220+SU18+Home+Page
