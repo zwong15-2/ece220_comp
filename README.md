@@ -32,8 +32,30 @@ selecting on the drop-down labeled `Branch: home-page`.
 
 ### First time set-up
 
-To be able to retrieve assignments from the `_release` repository you have to
-add it as a remote:
+Please follow the steps below to set up a repository with ECE220 and to be able
+retrieve/submit assignments.
+
+To create a repository for the class, visit
+<https://edu.cs.illinois.edu/ghe/createRepo/ece220/> and a repository will be
+created for you automatically. If you navigate to
+<https://github-dev.cs.illinois.edu/ECE220SU18>, you will see a repository under
+your NetID. Click on your NetID and you will be taken to a page that shows the
+contents of your repository.
+
+On the upper-left side of the page, there is a button **Clone or download**.
+Click on the button and make sure it says **Clone with HTTPS**. If not, click on
+the **Use HTTPS** text. Copy the link shown in the window which should be of the
+form <https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git>. In a terminal,
+navigate to the location where you would like to keep your files for ECE220.
+Then type and paste the copied URL:
+
+```
+git clone https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git
+```
+
+This will clone the remote repository to your computer where you will be able to
+retrieve/submit/work on assignments. To be able to retrieve assignments from the
+`_release` repository you have to add it as a remote:
 
 ```
 git remote add release https://github-dev.cs.illinois.edu/ECE220SU18/_release.git
@@ -47,50 +69,72 @@ git remote -v
 
 ### Retrieve assignments
 
-To retrieve (or updated) released assignments, run:
+To retrieve (or update) released assignments, run:
 
 ```
 git fetch release
 git merge release/<assignment> -m "<some comment>"
+git push origin master
 ``` 
 
 where `<assignment>` is a branch name corresponding to a particular assignment
-and `<some comment>` is a comment of your choice.
+and `<some comment>` is a comment of your choice. The last command pushes the
+newly merged files to your remote repository. If something ever happens to your
+repository and you need to go back in time, you will be able to revert your
+repository to when you first retrieved an assignment.
 
 ### Submit assignments
 
-To submit (or update) completed assignments, you will to follow these steps.
+To submit (or update) completed assignments, familiarize yourself with the
+process below.
 
-To see all modified and untracked files in your Git workspace, run:
+There are a couple of states that files may be in as you are working on your
+assignment:
+* unmodified tracked - files that are part of the local repository and have
+  not had any changes made to them.
+* modified tracked - files that are part of the local repository but have
+  been changed.
+* untracked - files that originally were not part of the local repository but
+  have been created and are part of the workspace now.
+All the files that are pulled/merged into your local repository are already
+tracked.
+
+To see all modified tracked and untracked files in your Git workspace, run:
 
 ```
 git status
 ```
 
-To add untracked files and modified files/directories, run:
+To stage any modified tracked or untracked files/directories for a commit, run:
 
 ```
 git add <file/directory> <file/directory> ...
 ```
 
-To commit newly added files/directories to your local repository and those with
-changes run:
+To commit any staged modified tracked or untracked files/directories to your
+local repository run:
 
 ```
 git commit <-a> -m "<some comment>"
 ```
 
-To automatically stage modified/deleted files that have already been added in
-the past, you can simply include the `<-a>` option. This way, you won't have to
-run `git add ...` on files that are being already tracked. Excluding this option
-gives you more control over the files you wish to commit.
+Rather than individually staging any modified tracked files, you can stage them
+all at once using the `<-a>` option with the above command. Note that this will
+not stage any untracked files. Which commands to use to stage files/directories
+depends on the situation. Individually staging files with `git add` gives you
+more control over which changes will be part of the next commit whereas using
+the `<-a>` option reduces the amount of typing necessary to stage all modified
+tracked files.
 
-Finally, push the changes in your local repository to the remote repository
-with:
+Finally, push the committed file/directories in your local repository to the
+remote repository with:
 
 ```
 git push origin master
 ```
+
+You should now be able to see the modified files/directories in the remote
+repository through the web browser.
 
 ### Switching branches
 
