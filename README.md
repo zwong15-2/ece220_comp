@@ -47,7 +47,7 @@ Click on the button and make sure it says **Clone with HTTPS**. If not, click on
 the **Use HTTPS** text. Copy the link shown in the window which should be of the
 form <https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git>. In a terminal,
 navigate to the location where you would like to keep your files for ECE220.
-Then type and paste the copied URL:
+Type and paste the copied URL:
 
 ```
 git clone https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git
