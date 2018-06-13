@@ -1,0 +1,36 @@
+Instructions
+************
+Given a string that contains only parentheses and a newline character, figure
+out whether the string is balanced or not. A string is balanced if each opening
+'(' has a corresponding closing ')'. If the string is balanced, set register R6
+to 1; otherwise if the string is unbalanced set register R6 to -1.
+
+Examples:
+Input: Console - "(\n"
+Output: Console - "("
+        R6 - -1
+
+Input: Console - ")(\n"
+Output: Console - ")("
+        R6 - -1
+
+Input Console - "(())\n"
+Output: Console - "(())"
+        R6 - 1
+
+The provided code in paren_stack.asm implements a stack and its two functions:
+PUSH and POP. You will need to implement the MAIN and IS_BALANCED subroutines.
+At the end of the program, R6 needs to be set to 1 if the input string is
+balanced or -1 if the input string is unbalanced. An example of how to implement
+the MAIN and IS_BALANCED functions is detailed below. You are free to separate
+the logic of the code however you like.
+
+The MAIN subroutine accepts reads inputs from the keyboard, echoes the entered
+string, checks for a newline character, calls the IS_BALANCED function, and sets
+the R6 value appropriately. Note that 'lc3sim-tk' uses '\r' as the newline
+character. It is recommended that you check both '\n' and '\r' to see if the
+input string has been terminated. The testing code will use '\n'.
+
+The IS_BALANCED subroutine uses the PUSH/POP functions to push/pop characters to
+and from the stack. The subroutine accepts input in register R0 and outputs a -1
+or 1 in R6 to indicate balanceness.
