@@ -18,6 +18,6 @@ DONE
     HALT		; Finish executing
 
 ; Data    
-HELLO_WORLD .STRINGZ "Hello <NAME>!\n"
+HELLO_WORLD .STRINGZ "Hello Zach Wong!\n"
 
 .END
