@@ -1,0 +1,8 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	MAIN              3000
+//	DONE              3002
+//	HELLO_WORLD       3003
+
