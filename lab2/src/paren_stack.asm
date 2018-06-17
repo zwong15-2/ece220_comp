@@ -1,5 +1,5 @@
 ; parent_stack.asm
-; Determines whether a string containing only parentheses and a newline
+; Determine whether a string containing only parentheses and a newline
 ; character is balanced or not
 
 ; Inputs:
@@ -67,7 +67,7 @@ PUSH_SaveR3	.BLKW #1	;
 PUSH_SaveR4	.BLKW #1	;
 
 
-; PUSH
+; POP
 ;   Description: Pops a character off the stack
 ;   Inputs: 
 ;   Outputs: R5 - 0 (success) or 1 (failure/underflow)
