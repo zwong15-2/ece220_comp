@@ -58,6 +58,7 @@ retrieve/submit/work on assignments. To be able to retrieve assignments from the
 `_release` repository you have to add it as a remote:
 
 ```
+cd NedID
 git remote add release https://github-dev.cs.illinois.edu/ECE220SU18/_release.git
 ```
 
