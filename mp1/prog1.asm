@@ -104,17 +104,217 @@ PRINT_HIST
 ; for your implementation, list registers used in this part of the code,
 ; and provide sufficient comments
 
+;This code prints the desired histogram to the monitor.
+
+;The code pulls initial ascii value for @ in memory and displays the next value
+
+;by adding one to the value after each new line
+
+;after doing this a space is added, and the hex number stored in the ascii 
+
+;values bin is outputed using a subroutine made in Lab 1 part b.
 
 
-DONE	HALT			; done
+
+
+
+;Registers:
+
+;R0: Used to output characters to monitor
+
+;R2: Counter
+
+
+
+			AND R0, R0, #0		;initialization of registers
+
+			AND R2, R2, #0
+
+	
+
+			LD R2, NUM_BINS		;Loads the number of bins in the counter (27)
+
+		
+
+NEXT_BIN	LD R0, FIRST_ASCII	;Load ascii character from associated bin into R0
+
+			OUT					;output to monitor
+
+		
+
+			ADD R0, R0, #1		;shift ascii character to the next character in order
+
+			ST R0, FIRST_ASCII	;store new value in memory space
+
+			
+
+			LD R0, SPACE		;load value for 'space' into R0
+
+			OUT					;output to monitor
+
+
+
+			BRnzp HEX			;move to hex subroutine to print number stored bin value to monitor
+
+		
+
+RETURN		LD R0, NEXT_LINE	;print a new line to monitor
+
+			OUT
+
+		
+
+			ADD R2, R2, #-1     ;decrement the counter by 1
+
+			BRp NEXT_BIN        ;Grab the next bin (if necessary)
+
+			HALT
+
+
+
+
+
+
+
+
+
+
+
+HEX
+
+		; Prints out a hexadecimal number store in register R3 to the console. The hexadecimal number has to be converted to an appropriate ASCII character in order for the number to     be displayed correctly.
+
+
+
+		; Inputs:
+
+		;   R3: hexadecimal number
+
+
+
+		; Outputs:
+
+		;   [0 - F]{4} printed to console
+
+
+
+		;Registers
+
+		;R0: Used to output to moniter
+
+		;R1: Shift counter
+
+		;R2: Bitwise adder
+
+		;R3: Storage for bin value
+
+		;R4: Overall counter
+
+				
+
+				ST R2, COUNTER
+
+
+
+				AND R0, R0, #0			;initialization of registers
+
+				AND R1, R1, #0
+
+				AND R2, R2, #0
+
+				AND R4, R4, #0
+
+	
+
+				ADD R4, R4, #4			;set counter
+
+				LDI R3, HIST_ADDR		;load histogram from memory address
+
+
+
+	BACK		ADD R1, R1, #4			;Set shift counter
+
+								
+
+	LOOP		ADD R2, R2, R2			;Left shift R2
+
+				ADD R3, R3, x0000		;Check if R3 is positive/negative
+
+				BRzp	ZERO
+
+				ADD R2, R2, #1			;Add 1 to R2 (if negative)
+
+			
+
+	ZERO		ADD R3, R3, R3			;left shift R3
+
+
+
+				ADD R1, R1, #-1			;decrement counter
+
+				BRnp LOOP				;loop 4 times
+
+
+
+				ADD R0, R2, #-9			;Check if hex digit is letter or number
+
+				BRnz NUM
+
+				LD R0, ASCII_LET		;if letter, then add letter offset to R0
+
+				BRnzp SKIP
+
+	NUM			LD R0, ASCII_NUM		;if number, add number offset to R0
+
+			
+
+	SKIP		ADD R0, R2, R0 			;add 4-bits to offset
+
+
+
+				OUT
+
+				AND R2, R2, x0000		;reset bitwise and R0
+
+
+
+				ADD R4, R4, #-1			;decrement overall counter
+
+				BRz DONE				;end if R3 is zero
+
+
+
+				AND R0, R0, x0000       ;reset R0
+
+				BRnzp BACK
+
+
+
+	DONE		LD R3, HIST_ADDR        ;Load histogram address into R3
+
+				ADD R3, R3, #1          ;Add 1 to R3
+
+				ST R3, HIST_ADDR        ;Store into R3
+
+				LD R2, COUNTER          ;Load counter into R2
+
+				BRnzp RETURN			; move back to other code section
+
+
 
 
 ; the data needed by the program
+FIRST_ASCII .FILL x0040 ; holds the value of first ASCII character
+COUNTER		.FILL x0000 ; holds the counter value
+SPACE		.FILL x0020 ; holds the value for the 'space' character
+NEXT_LINE	.FILL x000A ; holds the value for the 'newline' character
+ASCII_LET	.FILL x0037 ; holds the offset for ASCII letters
+ASCII_NUM	.FILL x0030 ; holds the offset for ASCII numbers
 NUM_BINS	.FILL #27	; 27 loop iterations
 NEG_AT		.FILL xFFC0	; the additive inverse of ASCII '@'
 AT_MIN_Z	.FILL xFFE6	; the difference between ASCII '@' and 'Z'
 AT_MIN_BQ	.FILL xFFE0	; the difference between ASCII '@' and '`'
-HIST_ADDR	.FILL x3F00     ; histogram starting address
+HIST_ADDR	.FILL x3F00 ; histogram starting address
 STR_START	.FILL x4000	; string starting address
 
 ; for testing, you can use the lines below to include the string in this
