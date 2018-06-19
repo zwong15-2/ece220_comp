@@ -114,8 +114,8 @@ PUSH_SaveR4	.BLKW #1	;
 ; POP
 ;   Description: Pops a character off the stack
 ;   Inputs: 
-;   Outputs: R5 - 0 (success) or 1 (failure/underflow)
-;	     R6 - character popped off the stack
+;   Outputs: R0 - character popped off the stack
+;	     R5 - 0 (success) or 1 (failure/underflow)
 ;   Registers: R3 - stores STACK_END
 ;	       R4 - stores STACK_TOP
 
