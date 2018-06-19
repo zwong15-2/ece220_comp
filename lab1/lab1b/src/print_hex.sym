@@ -1,0 +1,15 @@
+// Symbol table
+// Scope level 0:
+//	Symbol Name       Page Address
+//	----------------  ------------
+//	MAIN              3000
+//	LOOP2             3007
+//	LOOP1             300A
+//	L_SHIFT           3010
+//	DIGIT_CHECK       3013
+//	NUMBER            3019
+//	DONE              3021
+//	ASCII_NUM         3022
+//	ASCII_LET         3023
+//	HEX               3024
+
