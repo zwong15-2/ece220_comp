@@ -1,0 +1,19 @@
+Instructions
+************
+Write the missing lines and for-loop in the 'main' function in sin_func.c The
+objective of this lab so is to introduce IO and simple programming with C.
+
+main:
+Print and prompt the users for the values of (n, omega1, omega2) in that order.
+Using the values and following the alorithm below, print a sequence of n pairs
+of (x, f(x)).
+
+The algorithm is as follows:
+- for i in [0, n-1]
+    - x_i = i * \pi / n
+    - f(x) = sin(omega1 * x_i) + 1 / 2 * sin(omega2 * x_i)
+
+Execution:
+To run the program, type './bin/sin_func' and enter the 3 values when prompted
+to do so.
+
