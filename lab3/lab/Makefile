@@ -1,6 +1,6 @@
 #Compiler
 CC = gcc
-CFLAGS = -g -Wall -std=c99 -lm
+CFLAGS = -g -Wall -std=c99
 
 #Directories
 SRC_DIR = src
@@ -23,7 +23,7 @@ TARGET := $(BIN_DIR)/$(EXEC)
 all: $(TARGET)
 
 $(TARGET): dirs $(OBJECTS)
-	$(CC) $(CFLAGS) -o $@ $(OBJECTS)
+	$(CC) $(CFLAGS) -o $@ $(OBJECTS) -lm
 
 $(OBJECTS): $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
 	$(CC) $(CFLAGS) -c -o $@ $<

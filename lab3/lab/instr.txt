@@ -11,7 +11,7 @@ of (x, f(x)).
 The algorithm is as follows:
 - for i in [0, n-1]
     - x_i = i * \pi / n
-    - f(x) = sin(omega1 * x_i) + 1 / 2 * sin(omega2 * x_i)
+    - f(x) = sin(omega1 * x_i) + 0.5 * sin(omega2 * x_i)
 
 Execution:
 To run the program, type './bin/sin_func' and enter the 3 values when prompted
