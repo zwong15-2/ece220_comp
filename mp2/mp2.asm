@@ -105,22 +105,22 @@ CHECK_NUM	LD R1, ASCII_ZERO		;load ascii zero value into R1 and negate it
 
 
 ;DATA
-MAIN_ADDR	.FILL x3000			
-ASCII_MULT	.FILL x002A
-ASCII_DIV	.FILL x002F
-ASCII_PLUS	.FILL x002B
-ASCII_MINUS	.FILL x002D
-ASCII_ZERO	.FILL x0030			
-ASCII_NINE	.FILL x0039
-EQUAL_VAL	.FILL x003D
-SPACE		.FILL x0020
+MAIN_ADDR	.FILL x3000     ;Address of MAIN			
+ASCII_MULT	.FILL x002A     ;Ascii value of '*' character
+ASCII_DIV	.FILL x002F     ;Ascii value of '/' character
+ASCII_PLUS	.FILL x002B     ;Ascii value of '+' character
+ASCII_MINUS	.FILL x002D     ;Ascii value of '-' character
+ASCII_ZERO	.FILL x0030		;Ascii value of '0'	 
+ASCII_NINE	.FILL x0039     ;Ascii value of '9'
+EQUAL_VAL	.FILL x003D     ;Ascii value of '=' character
+SPACE		.FILL x0020     ;Ascii value of 'space' character
 
 
 
 
 
 NEGATE
-;negates character in R1
+;Negates character in R1
 ;Inputs: R1 - Input Value
 ;Outputs: R1 - Negated Input Value
 
