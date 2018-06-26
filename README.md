@@ -163,10 +163,12 @@ repository through the web browser.
 To avoid issues with having to pull code from the remote repository, a new
 branch called 'grade' will be created for you once the first assignment has been
 graded. You can view your grades through the web browser by navigating to 
-<https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git> and clicing on the
-button that says `Branch: master`. Click on the `grade` option and this will
+<https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git> (replacing NetID with
+your own) and clicking on the button that says `Branch: master`. A dropdown with
+all available branches will appear. Click on the `grade` option. This will
 display a list of directories corresponding to each of your assignments. Inside
 these directories, you will find a `grade.txt` file with your score.
+
 
 [1]: https://wiki.illinois.edu/wiki/display/ece220su2/ECE+220+SU18+Home+Page
 [2]: https://try.github.io/levels/1/challenges/1
