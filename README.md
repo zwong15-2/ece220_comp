@@ -68,12 +68,24 @@ You can check whether the remote was added:
 git remote -v
 ```
 
-To set your git configuration parameters, you run:
+Set your user name and email with:
 
 ```
-git config user.name "Matt Potok"
-git config user.email "potok2@illinois.edu"
+git config user.name "Your Name"
+git config user.email "NetID@illinois.ed"
 ```
+
+Verify that your name and email have been correctly set:
+
+```
+git config --local --list
+```
+
+It is important that this configuration information is correct because it is
+used by the grading script to get the correct revision of your submissions for
+grading. If this information is not set according to the above guidelines, your
+assignments may be graded incorrectly.
+
 
 ### Retrieve assignments
 
@@ -90,6 +102,7 @@ and `<some comment>` is a comment of your choice. The last command pushes the
 newly merged files to your remote repository. If something ever happens to your
 repository and you need to go back in time, you will be able to revert your
 repository to when you first retrieved an assignment.
+
 
 ### Submit assignments
 
@@ -144,26 +157,16 @@ git push origin master
 You should now be able to see the modified files/directories in the remote
 repository through the web browser.
 
-### Switching branches
-
-You can see a list of branches with:
-
-```
-git branch
-```
-
-To change to another branch, run:
-
-```
-git checkout <another branch>
-```
-
-Please commit all your work before switching branches to minimize data loss.
 
 ## Grades
 
-This section will be updated in the near future.
-
+To avoid issues with having to pull code from the remote repository, a new
+branch called 'grade' will be created for you once the first assignment has been
+graded. You can view your grades through the web browser by navigating to 
+<https://github-dev.cs.illinois.edu/ECE220SU18/NetID.git> and clicing on the
+button that says `Branch: master`. Click on the `grade` option and this will
+display a list of directories corresponding to each of your assignments. Inside
+these directories, you will find a `grade.txt` file with your score.
 
 [1]: https://wiki.illinois.edu/wiki/display/ece220su2/ECE+220+SU18+Home+Page
 [2]: https://try.github.io/levels/1/challenges/1
