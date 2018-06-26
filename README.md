@@ -68,6 +68,13 @@ You can check whether the remote was added:
 git remote -v
 ```
 
+To set your git configuration parameters, you run:
+
+```
+git config user.name "Matt Potok"
+git config user.email "potok2@illinois.edu"
+```
+
 ### Retrieve assignments
 
 To retrieve (or update) released assignments, run:
