@@ -1,0 +1,14 @@
+Instructions
+************
+Implement a function to multiply two matrices together. The sizes of the
+matrices will be provided as arguments to the executable and the two matrices
+being multiplied will be randomly generated. You will need to multiply these two
+matrices and store the results in an output matrix.
+
+matrix.c:matrix_multiply - 
+Given the two input and one output matrix as arrays along with integers
+specifying their dimensions, perform matrixC = matrixA * matrixB.
+
+Execution:
+Run the program as './bin/mat_mult m n k' where m, n, k are the dimensions of
+the matrices.
