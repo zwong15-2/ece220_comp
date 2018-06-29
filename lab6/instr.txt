@@ -1,0 +1,26 @@
+Instructions
+************
+Implement a vector in C. You will have to implement the 6 functions found in
+vector.c.
+
+createVector(int initialSize):
+Creates a 'vector' of size 'initialSize'
+
+destroyVector(vector_t *vector):
+Frees 'vector' and any associated allocated data inside the 'vector'
+
+resize(vector_t *vector):
+Resizes the 'vector' to be twice as big as before
+
+push_back(vector_t *vector, int element):
+Adds 'element' to the back of 'vector'
+
+pop_back(vector_t *vector):
+Removes the last element from 'vector' and returns it
+
+access(vector_t *vector, int index):
+Returns 'vector[index]' or 0 if out of bounds
+
+Execution:
+Run ./bin/vector
+

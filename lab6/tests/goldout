@@ -1,0 +1,10 @@
+Vector has size 0 and max size 2
+Vector has size 3 and max size 4
+Accessing first three elements:
+1
+2
+3
+Popping back:
+3
+Vector has size 2 and max size 4
+Destroying vector
