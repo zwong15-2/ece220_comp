@@ -1,0 +1,18 @@
+Instructions
+************
+Write code to simulate rolling six-sided dice. You will need to implement the
+'roll_three' function in dice.c and implement the 'main' function in main.c.
+
+main:
+Follow the steps listed below to implement the 'main' function
+- Prompt the user for a seed value
+- Read an integer using scanf
+- Call the srand function using the input integer
+- Call 'roll_three' function and print the results
+
+roll_three:
+Roll three six-sided dice by calling the 'rand' function and using the modulus
+operator to limit the output to be in the range [1, 6]
+
+Execution:
+Run the program with './bin/dice' and enter an integer to set srand
