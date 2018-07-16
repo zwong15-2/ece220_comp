@@ -20,5 +20,5 @@ int checkMaze(maze_t * maze);
 // These functions must be implemented correctly for full functionality points 
 maze_t * createMaze(char * fileName);
 void destroyMaze(maze_t * maze);
-int solveMazeManhattanDFS(maze_t * maze, int col, int row);
+int solveMazeDFS(maze_t * maze, int col, int row);
 void printMaze(maze_t * maze);
