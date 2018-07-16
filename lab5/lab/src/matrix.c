@@ -9,5 +9,23 @@
 void matrix_multiply(double *matrixA,double *matrixB,double *matrixC,int m,int k,int n)
 {
 //YOUR CODE HERE
+int i;
+int j;
+int l;
+double sum;
+
+for(i = 0; i < m; i++)
+   {
+    for(j = 0; j < n; j++)
+       {
+        sum = 0;
+       
+        for(l = 0; l < k; l++)
+           {
+             (*(matrixC + (i*n+j) )) += (*(matrixA + (i*k+l) )) * (*(matrixB + (l*n+j) ));
+           }
+         
+       }
+   }
 }
 
