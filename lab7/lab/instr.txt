@@ -1,0 +1,13 @@
+Instructions
+************
+Implement an algorithm to find the lowest common ancestor (LCA) of a binary
+search tree (BST). You will have to implement the 'lowest_common_ancestor'
+function.
+
+lowest_common_ancestor(NODE *root, int first_number, int second_number):
+Find the lowest common ancestor of two nodes containing the {first,
+second}_number. Hint, think how a BST is organized because this simplifies the
+algorithm quite a bit.
+
+Execution:
+Run ./bin/lca and follow the on-screen prompts.
