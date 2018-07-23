@@ -1,0 +1,8 @@
+Instructions
+************
+Implement the Rectangle class by implementing all the functions in Rectangle.h
+and two functions in main.cpp. These functions are self-explanatory and each
+one is at most a few lines of code.
+
+Execution:
+Run ./bin/rectangle tests/testX where X is a number
