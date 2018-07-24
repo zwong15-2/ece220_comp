@@ -2,7 +2,7 @@
 #define EMPTY   ' '
 #define START   'S'
 #define END     'E'
-#define PATH    '.'
+#define PATH    '*'
 #define VISITED '~'
 
 typedef struct {
