@@ -1,0 +1,21 @@
+
+Test 1 (45 points if diff is empty)
+Output for test 1 is the same
+
+Test Real (15 points if diff is empty)
+Output for test real is the same
+
+Test Complex (15 points if diff is empty)
+Output for test complex is the same
+
+Test Rational (15 points if diff is empty)
+Output for test rational is the same
+
+Grade
+*****
+Late submission: 0
+Functionality: 90
+Style/Comments: 5
+Intro Paragraph: 5
+Total: 100
+********
