@@ -45,6 +45,17 @@ int main(int argc,char *argv[])
 int calc_area_of_sum_Rectangle(vector<Rectangle> all_rectangles){
 	int number_of_rectangles = all_rectangles.size();
 //INSERT YOUR CODE HERE:
+Rectangle summation (0,0);
+
+
+int i = 0;
+while(i < number_of_rectangles)
+{
+  summation = all_rectangles[i] + summation;
+  i++;
+
+}
+return summation.area();
 
 }
 
@@ -56,6 +67,13 @@ int calc_area_of_sum_Rectangle(vector<Rectangle> all_rectangles){
 int calc_perimeter_of_product_Rectangle(vector<Rectangle> all_rectangles){
 	int number_of_rectangles = all_rectangles.size();
 //INSERT YOUR CODE HERE:
+Rectangle summation_1 (1,1);
 
-	
+int i = 0;
+while(i < number_of_rectangles)
+{
+  summation_1 = all_rectangles[i] * summation_1;
+  i++;
+}
+	return summation_1.perimeter();
 }
